@@ -31,7 +31,7 @@ jobs:
       with:
         context: .  # Current directory path
         push: true  # Push the built image to Docker Hub
-        tags: abinbabu2001/blog-microservices:1  # Tag the image with version 1
+        tags: logeshc12/microservice-blog:1  # Tag the image with version 1
 
     # Step 5: Log out from Docker Hub to clean up
     - name: Log out from Docker Hub
