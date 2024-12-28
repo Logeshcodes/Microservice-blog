@@ -29,7 +29,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v3
       with:
-        context: .  # Current directory
+        context: .  # Current directory path
         push: true  # Push the built image to Docker Hub
         tags: abinbabu2001/blog-microservices:1  # Tag the image with version 1
 
