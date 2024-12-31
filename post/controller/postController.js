@@ -44,9 +44,9 @@ const addPost = async (req, res) => {
 
 const deletePost = async (req, res) => {
     try {
-        console.log(req.query.id);
-        await postModel.deleteOne({ _id: req.query.id })  
-        await produce('delete-post',JSON.stringify(req.query.id))
+        console.log(req.params.id);
+        await postModel.deleteOne({ _id: req.params.id })  
+        await produce('delete-post',JSON.stringify(req.params.id))
         
         res.status(200).send({message:'post deleted'})
     } catch (error) {

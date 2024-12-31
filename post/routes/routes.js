@@ -6,7 +6,7 @@ const router=express.Router()
 
 router.get('/api/postservice/getpost' , getPost)
 router.post('/api/postservice/addpost' , addPost)
-router.delete('/api/postservice/deletepost', deletePost)
+router.delete('/api/postservice/deletepost/:id', deletePost)
 
 module.exports=router
 
