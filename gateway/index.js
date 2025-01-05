@@ -10,6 +10,9 @@ app.use(express.json());
 
 const authenticate = require('./middleware/authMiddleware')
 
+
+// Authenication in gateway
+
 app.use('/post' ,  authenticate, proxy('http://localhost:3001/'))
 app.use('/auth' ,  proxy('http://localhost:3000/')) //auth service
 app.use('/comment', authenticate, proxy('http://localhost:3002/'));
